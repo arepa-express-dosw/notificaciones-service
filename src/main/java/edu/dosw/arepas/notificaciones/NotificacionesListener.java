@@ -12,6 +12,6 @@ public class NotificacionesListener {
 
     @RabbitListener(queues = RabbitConfig.QUEUE)
     public void avisar(PedidoCreadoEvent pedido) {
-        log.info("Hola {}, recibimos tu pedido {}. Ya lo estamos preparando!", pedido.cliente(), pedido.pedidoId());
+        log.info("Notificación para {}: pedido {} recibido y en preparación.", pedido.cliente(), pedido.pedidoId());
     }
 }
