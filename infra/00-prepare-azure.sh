@@ -19,6 +19,7 @@ az provider register --namespace Microsoft.App
 az provider register --namespace Microsoft.OperationalInsights
 az provider register --namespace Microsoft.ApiManagement
 az provider register --namespace Microsoft.ContainerInstance
+az provider register --namespace Microsoft.ContainerRegistry
 
 # Crear grupo de recursos de manera idempotente
 if ! az group show --name "$RG" &>/dev/null; then
@@ -39,3 +40,4 @@ else
 fi
 
 echo "==> Preparación inicial completada con éxito."
+
